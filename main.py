@@ -2,11 +2,11 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
-@app.route('/home/')
+@app.route('home')
 def index():
     return 'Index Page'
 
-@app.route('/hello/')
+@app.route('hello')
 def hello():
     return 'Hello, World'
 	
