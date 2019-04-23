@@ -1,9 +1,6 @@
 from flask import Flask
 app = Flask(__name__)
 
-@app.route('/about')
-def about():
-  return 'Hey its about route in Python Flask application!'
 
  posts = [
     {
@@ -21,9 +18,12 @@ def about():
 ]
 
 @app.route("/")
-@app.route("/home")
 def home():
     return 'Hey its Home or default route in  Python Flask application!'
-  
+
+@app.route('/about')
+def about():
+  return 'Hey its about route in Python Flask application!'
+	
 if __name__ == '__main__':
   app.run()
